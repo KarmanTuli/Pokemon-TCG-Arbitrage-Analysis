@@ -27,4 +27,4 @@ With a base of the arbitrage opportunities identified, this script scrapes TCGPl
 ALL DATA STORED IN INTERNAL SQLite DATABASE
 
 
-_PowerBI Dashboard titled "Pokemon TCG Arbitrage" has a live connection to these tables, enabling in-depth analysis._
+_**PowerBI Dashboard titled "Pokemon TCG Arbitrage"** has a live connection to these tables, enabling in-depth analysis._
