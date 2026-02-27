@@ -4,27 +4,35 @@ In the files uploaded - as of 2/27/2026 - I have included all python files, ran 
 **TCGPlayer Market Price Scrape:**
 baseline_prices.py
 
-Scrapes prices of 2,000+ English Sealed Pokemon TCG Products, and the according price for each product. TCGPlayer contains the biggest dataset for market data for Trading Card Game products.
+Scrapes prices of 2,000+ English Sealed Pokemon TCG Products, and the according price for each product directly from TCGPlayer.com. TCGPlayer contains the biggest dataset for market data for Trading Card Game products.
+
+Creates baseline_prices table in tcg_inventory.db
 
 **OfferUp Listing Scraper**
 offerup_scraper.py
 
 Scrapes listings of English sealed Pokemon Products within products in a 10, 20, 30 mile radius from my zipcode. Aiming for local deals and eventually measuring effort/distance relative to profit.
 
+Creates raw_offerup_listings table in tcg_inventory.db
+
 **Gemini 2.5 Flash Efficient Cleaning**
 Gemini_cleaner.py
 
 Cleans 6000+ local Pokemon sealed listings ( Ex: !!!POKEMON 151 BUNDLE FOR SALE!! ---> Pokemon 151 Bundle.. next step converts this Pokemon 151 Bundle to Pokemon 151 Booster Bundle - the standardized name to then compare to TCGPlayer).
+
+Creates clean_offerup_listings table in tcg_inventory.db
 
 **Arbitrage Opportunities Identified**
 Arbitrage_engine.py
 
 Run script to refresh arbitrage_opportunities (table stored in SQLite database), discovering Profit Margin, Return on Investment, City Location, Distance Tier, URL, Item Name, and Price Difference for each OfferUp listing.
 
+Creates arbitrage_opportunities table in tcg_inventory.db
+
 **Liquidity for Top 100 Deals**
 With a base of the arbitrage opportunities identified, this script scrapes TCGPlayer once more for the liquidity of these deals, ensuring measured decision making when potentially securing a deal. When searching for potential profit, it is best to stick with higly liquid items. This brings in Total Sold and Average Daily Sold in last 3 months.
 
-ALL DATA STORED IN INTERNAL SQLite DATABASE
 
+Creates enriched_top_deals table in tcg_inventory.db
 
 _**PowerBI Dashboard titled "Pokemon TCG Arbitrage"** has a live connection to these tables, enabling in-depth analysis._
