@@ -25,7 +25,7 @@ Creates raw_offerup_listings table in tcg_inventory.db
 **Gemini 2.5 Flash Efficient Cleaning**
 Gemini_cleaner.py
 
-Cleans 6000+ local Pokemon sealed listings with the use of an effective Gemini 2.5 Flash prompt - individually scanning each row ( Ex: !!!POKEMON 151 BUNDLE FOR SALE!! ---> Pokemon 151 Bundle.. next step converts this Pokemon 151 Bundle to Pokemon 151 Booster Bundle - the standardized name to then compare to TCGPlayer).
+Cleans 6000+ local Pokemon sealed listings with the use of an effective Gemini 2.5 Flash prompt - individually scanning each row ( Ex: !!!POKEMON 151 BUNDLE FOR SALE!! ---> Pokemon 151 Bundle.. next step below converts this Pokemon 151 Bundle to "Pokemon 151 Booster Bundle" - the standardized name to then uniquely match to TCGPlayer).
 
 Creates clean_offerup_listings table in tcg_inventory.db
 
